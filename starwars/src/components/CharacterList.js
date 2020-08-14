@@ -2,6 +2,8 @@ import React from 'react'
 import Character from './Character'
 
 
+
+
 export default function CharacterList(props) {
 
     const {charData, setCharData} = props
@@ -14,11 +16,11 @@ export default function CharacterList(props) {
                     return <Character
                         key={char.id}
                         char={char}
-                        setCharData={setCharData}
+                      
                     />
                 })
             }
-
+            
         </div>
     )
 
