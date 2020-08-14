@@ -11,6 +11,13 @@ const StyledChar = styled.div`
     display: flex;
     justify-content: space-between;
 
+    div {
+        display:flex;
+        flex-flow: column wrap;
+        margin: auto;
+
+    }
+
 `
 
 export default function Character(props) {
@@ -19,9 +26,12 @@ export default function Character(props) {
 
     return (
         <StyledChar>
-            <h2>{char.name}</h2>
-            <h3>Status{char.status}</h3>
-            <h3>{char.species}</h3>
+            <div>
+                <h2>{char.name}</h2>
+                <h3>Status: {char.status}</h3>
+                <h3>Species: {char.species}</h3>
+                <h3>Place of Origin: {char.origin.name}</h3>
+            </div>
             <img src={char.image} />
         </StyledChar>
 
